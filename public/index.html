@@ -22,7 +22,9 @@
 
         socket.emit('mensaje', { nombre: 'Fernando' });
 
-        socket.on('mensaje', payload => console.log('Escuchando', payload));
+        socket.on('nuevo-mensaje', payload => console.log('Escuchando', payload));
+
+        socket.on('active-bands', bands => console.table('Escuchando', [bands]));
     </script>
 
 
